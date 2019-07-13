@@ -4,7 +4,7 @@ language:
 osx_image: xcode11
 
 xcode_project: Example/SwiftyDeck.xcodeproj # path to your xcodeproj folder
-xcode_scheme: SwiftyDeck_Tests
+xcode_scheme: SwiftyDeck-Example
 xcode_destination: platform=iOS Simulator,name=iPhone X,OS=12.1
 
 after_success:
