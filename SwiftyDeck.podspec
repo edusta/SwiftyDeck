@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A Helpful Framework for Card Games
                        DESC
 
-  s.homepage         = 'https://github.com/Engin Deniz Usta/SwiftyDeck'
+  s.homepage         = 'https://github.com/edusta/SwiftyDeck'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Engin Deniz Usta' => 'engin@ceng.metu.edu.tr' }
-  s.source           = { :git => 'https://github.com/Engin Deniz Usta/SwiftyDeck.git', :tag => s.version.to_s }
+  s.author           = { 'Engin Deniz Usta' => 'engin@connected2.me' }
+  s.source           = { :git => 'https://github.com/edusta/SwiftyDeck.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SwiftyDeck/Classes/**/*'
   
@@ -38,5 +38,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Quick'
+  s.dependency 'Nimble'
+  s.dependency 'SwiftLint'
 end

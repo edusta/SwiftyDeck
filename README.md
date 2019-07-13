@@ -1,6 +1,6 @@
 # SwiftyDeck
 
-[![CI Status](https://img.shields.io/travis/Engin Deniz Usta/SwiftyDeck.svg?style=flat)](https://travis-ci.org/Engin Deniz Usta/SwiftyDeck)
+[![CI Status](https://img.shields.io/travis/edusta/SwiftyDeck.svg?style=flat)](https://travis-ci.org/edusta/SwiftyDeck)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyDeck.svg?style=flat)](https://cocoapods.org/pods/SwiftyDeck)
 [![License](https://img.shields.io/cocoapods/l/SwiftyDeck.svg?style=flat)](https://cocoapods.org/pods/SwiftyDeck)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyDeck.svg?style=flat)](https://cocoapods.org/pods/SwiftyDeck)
