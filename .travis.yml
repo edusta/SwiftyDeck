@@ -2,6 +2,7 @@ language:
   - swift
 
 osx_image: xcode11
+podfile: Example/Podfile
 
 xcode_project: Example/SwiftyDeck.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SwiftyDeck-Example
