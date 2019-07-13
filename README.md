@@ -22,7 +22,7 @@ pod 'SwiftyDeck'
 
 ## Author
 
-Engin Deniz Usta, engin@ceng.metu.edu.tr
+Engin Deniz Usta, engin@connected2.me
 
 ## License
 

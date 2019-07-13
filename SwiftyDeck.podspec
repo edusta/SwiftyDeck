@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftyDeck'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftyDeck.'
+  s.summary          = 'A Swifty Framework for Card Games'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A Helpful Framework for Card Games
+SwiftyDeck is created in order to reuse mostly-generic Card/Deck concept for any project.
                        DESC
 
   s.homepage         = 'https://github.com/edusta/SwiftyDeck'
@@ -26,10 +26,10 @@ A Helpful Framework for Card Games
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Engin Deniz Usta' => 'engin@connected2.me' }
   s.source           = { :git => 'https://github.com/edusta/SwiftyDeck.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/edustaa'
 
+  s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
-
   s.source_files = 'SwiftyDeck/Classes/**/*'
   
   # s.resource_bundles = {
