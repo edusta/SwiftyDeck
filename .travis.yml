@@ -8,5 +8,8 @@ xcode_project: Example/SwiftyDeck.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SwiftyDeck-Example
 xcode_destination: platform=iOS Simulator,name=iPhone X,OS=12.1
 
+before_install:
+  - pod repo update
+  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
