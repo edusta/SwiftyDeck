@@ -14,6 +14,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6937002222DA318900C2233C /* SwiftyDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109622DA2DC600182936 /* SwiftyDeckTests.swift */; };
+		6937002322DA318B00C2233C /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109822DA2DDE00182936 /* CardTests.swift */; };
+		6937002422DA319000C2233C /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109A22DA2DE700182936 /* DeckTests.swift */; };
 		8C08BD6F825AD7F1CC0128FC /* Pods_SwiftyDeck_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9A663D2774258FAB640AA0 /* Pods_SwiftyDeck_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0281EEEDA6DCF137647AAA6E /* Pods-SwiftyDeck_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Example/Pods-SwiftyDeck_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		436AE47E1C7BF3303C2FAF36 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		436AE47E1C7BF3303C2FAF36 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftyDeck_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyDeck_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,12 +43,15 @@
 		607FACE51AFB9204008FA782 /* SwiftyDeck_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyDeck_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		692C109622DA2DC600182936 /* SwiftyDeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyDeckTests.swift; sourceTree = "<group>"; };
+		692C109822DA2DDE00182936 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		692C109A22DA2DE700182936 /* DeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
 		783B5AA65CA7CA0C0010C8D9 /* Pods-SwiftyDeck_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Example.release.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Example/Pods-SwiftyDeck_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7B9A663D2774258FAB640AA0 /* Pods_SwiftyDeck_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyDeck_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C1E3A2B91A22AAF71B586A /* Pods-SwiftyDeck_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Tests/Pods-SwiftyDeck_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FDBB0C71922B9A4F905D7C4 /* Pods_SwiftyDeck_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyDeck_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE3DE38EDA7DE495E74A42CD /* SwiftyDeck.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftyDeck.podspec; path = ../SwiftyDeck.podspec; sourceTree = "<group>"; };
-		F5FCAA67F7C9CB5A4F27A81D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EE3DE38EDA7DE495E74A42CD /* SwiftyDeck.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyDeck.podspec; path = ../SwiftyDeck.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F5FCAA67F7C9CB5A4F27A81D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FE2B694A4B08E2D08E48D55B /* Pods-SwiftyDeck_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Tests/Pods-SwiftyDeck_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +121,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				692C109622DA2DC600182936 /* SwiftyDeckTests.swift */,
+				692C109822DA2DDE00182936 /* CardTests.swift */,
+				692C109A22DA2DE700182936 /* DeckTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -156,7 +165,6 @@
 				FE2B694A4B08E2D08E48D55B /* Pods-SwiftyDeck_Tests.debug.xcconfig */,
 				87C1E3A2B91A22AAF71B586A /* Pods-SwiftyDeck_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +222,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8K86TA23F5;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -228,6 +237,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -361,6 +371,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6937002422DA319000C2233C /* DeckTests.swift in Sources */,
+				6937002322DA318B00C2233C /* CardTests.swift in Sources */,
+				6937002222DA318900C2233C /* SwiftyDeckTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +512,7 @@
 			baseConfigurationReference = 0281EEEDA6DCF137647AAA6E /* Pods-SwiftyDeck_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8K86TA23F5;
 				INFOPLIST_FILE = SwiftyDeck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -514,6 +528,7 @@
 			baseConfigurationReference = 783B5AA65CA7CA0C0010C8D9 /* Pods-SwiftyDeck_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8K86TA23F5;
 				INFOPLIST_FILE = SwiftyDeck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

@@ -1,0 +1,6 @@
+framework module Pods_SwiftyDeck_Example {
+  umbrella header "Pods-SwiftyDeck_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

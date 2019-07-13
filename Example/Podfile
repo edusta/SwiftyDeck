@@ -1,3 +1,5 @@
+platform :ios, '10.0'
+
 use_frameworks!
 
 target 'SwiftyDeck_Example' do
@@ -6,7 +8,8 @@ target 'SwiftyDeck_Example' do
   target 'SwiftyDeck_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'SwiftLint'
   end
 end
