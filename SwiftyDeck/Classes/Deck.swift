@@ -1,6 +1,6 @@
 //
 //  Deck.swift
-//  Nimble
+//  SwiftyDeck
 //
 //  Created by engin on 13.07.2019.
 //  Copyright © 2019 EDUsta. All rights reserved.
@@ -13,10 +13,13 @@ public enum DeckError: Error, Equatable {
     case notEnoughCards(deckCount: Int, drawCount: Int)
 }
 
-public struct Deck {
+public struct Deck: Drawable {
     public private(set) var cards: [Card]
+    public var count: Int {
+        return cards.count
+    }
     
-    public static func standard(shuffled: Bool = true) -> Deck {
+    public static func standard(shuffled: Bool) -> Deck {
         let cards = Rank.allCases.flatMap { (rank) -> [Card] in
             return Suit.allCases.map({ (suit) -> Card in
                 return Card(suit: suit, rank: rank)
@@ -25,26 +28,18 @@ public struct Deck {
         
         return Deck(cards: shuffled ? cards.shuffled() : cards)
     }
-    
-    public var count: Int {
-        return cards.count
-    }
-    
+
     public mutating func deal() -> Result<Card, Error> {
-        let result = draw()
+        let result = draw(randomly: false, drawCount: 1)
         
         switch result {
         case .success(let cards):
-            guard cards.count == 1, let drawnCard = cards.first else {
-                return .failure(DeckError.invalidDrawCount(drawCount: 1))
-            }
-            
-            return .success(drawnCard)
+            return .success(cards.first!)
         case .failure(let error):
             return .failure(error)
         }
     }
-    public mutating func draw(randomly: Bool = false, drawCount: Int = 1) -> Result<[Card], Error> {
+    public mutating func draw(randomly: Bool, drawCount: Int) -> Result<[Card], Error> {
         guard drawCount > 0 else {
             return .failure(DeckError.invalidDrawCount(drawCount: drawCount))
         }
@@ -57,6 +52,10 @@ public struct Deck {
             // Since we are sure that the Array has enough Cards.
             return (randomly ? self.cards.popRandom() : self.cards.popLast())!
         })
+        
+        guard drawnCards.count == drawCount else {
+            return .failure(DeckError.invalidDrawCount(drawCount: drawCount))
+        }
 
         return .success(drawnCards)
     }

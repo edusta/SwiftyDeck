@@ -1,6 +1,6 @@
 //
 //  DeckTests.swift
-//  SwiftyDeck_Example
+//  SwiftyDeck_Tests
 //
 //  Created by engin on 13.07.2019.
 //  Copyright © 2019 CocoaPods. All rights reserved.
@@ -13,13 +13,15 @@ import SwiftyDeck
 class DeckTests: QuickSpec {
     override func spec() {
         var deck: Deck!
+        var trueCardsSet: Set<Card>!
         beforeEach {
-            deck = Deck.standard()
+            deck = Deck.standard(shuffled: true)
+            trueCardsSet = Set(deck.cards)
         }
         
         describe("standard decks") {
             it("should pass the single deck test") {
-                let shuffledDeck = Deck.standard()
+                let shuffledDeck = Deck.standard(shuffled: true)
                 let sortedDeck = Deck.standard(shuffled: false)
                 
                 for deck in [shuffledDeck, sortedDeck] {
@@ -42,7 +44,7 @@ class DeckTests: QuickSpec {
                 }
                 expect(deck.count) == 0
                 expect(emptyShoe).to(haveCount(SwiftyDeckTests.trueDeckCount))
-                expect(Set(Deck.standard().cards)) == Set(emptyShoe)
+                expect(Set(emptyShoe)) == trueCardsSet
                 
                 // Error: Drawing on empty deck
                 let expectedError = DeckError.notEnoughCards(deckCount: 0, drawCount: 1)
@@ -57,7 +59,7 @@ class DeckTests: QuickSpec {
                     let result = deck.draw(randomly: true, drawCount: SwiftyDeckTests.trueDeckCount)
                     expect {
                         let cards = try result.get()
-                        expect(Set(Deck.standard().cards)) == Set(cards)
+                        expect(Set(cards)) == trueCardsSet
                         return nil
                     }.notTo(throwError(errorType: DeckError.self))
                 }
@@ -72,19 +74,19 @@ class DeckTests: QuickSpec {
             }
             context("standard") {
                 it("should fetch all the deck") {
-                    let result = deck.draw(drawCount: SwiftyDeckTests.trueDeckCount)
+                    let result = deck.draw(randomly: false, drawCount: SwiftyDeckTests.trueDeckCount)
                     expect {
                         let cards = try result.get()
-                        expect(Set(Deck.standard().cards)) == Set(cards)
+                        expect(Set(cards)) == trueCardsSet
                         return nil
                     }.notTo(throwError(errorType: DeckError.self))
                 }
                 it("should not be able to fetch more than the deck has") {
-                    let result = deck.draw(drawCount: SwiftyDeckTests.trueDeckCount + 1)
+                    let result = deck.draw(randomly: false, drawCount: SwiftyDeckTests.trueDeckCount + 1)
                     expect { try result.get() }.to(throwError(errorType: DeckError.self))
                 }
                 it("should not be able to fetch < 1 cards") {
-                    let result = deck.draw(drawCount: -1)
+                    let result = deck.draw(randomly: false, drawCount: -1)
                     expect { try result.get() }.to(throwError(errorType: DeckError.self))
                 }
             }
@@ -100,19 +102,19 @@ extension DeckTests {
         for rank in Rank.allCases {
             expect(deck.cards.filter({ (card) -> Bool in
                 return card.rank == rank
-            }).count) == SwiftyDeckTests.trueSuitCount
+            })).to(haveCount(SwiftyDeckTests.trueSuitCount))
         }
         
         // Suit test: Every deck has to have <trueRankCount> cards of the same suit.
         for suit in Suit.allCases {
             expect(deck.cards.filter({ (card) -> Bool in
                 return card.suit == suit
-            }).count) == SwiftyDeckTests.trueRankCount
+            })).to(haveCount(SwiftyDeckTests.trueRankCount))
         }
         
         // Duplication test: Every deck has to have <trueDeckCount> cards, without duplication.
         let cardSet = Set(deck.cards)
-        expect(cardSet.count) == SwiftyDeckTests.trueDeckCount
+        expect(cardSet).to(haveCount(SwiftyDeckTests.trueDeckCount))    
     }
     private func testSingleError<T: Any>(on result: Result<T, Error>, expectedError: DeckError) {
         switch result {

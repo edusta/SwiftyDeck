@@ -1,6 +1,6 @@
 //
 //  Card.swift
-//  Nimble
+//  SwiftyDeck
 //
 //  Created by engin on 13.07.2019.
 //  Copyright © 2019 EDUsta. All rights reserved.

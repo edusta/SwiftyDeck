@@ -1,6 +1,6 @@
 //
 //  SwiftyDeckTests.swift
-//  SwiftyDeck_Example
+//  SwiftyDeck_Tests
 //
 //  Created by engin on 13.07.2019.
 //  Copyright © 2019 CocoaPods. All rights reserved.
