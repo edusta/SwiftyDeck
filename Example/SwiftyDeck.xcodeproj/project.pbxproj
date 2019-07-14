@@ -13,7 +13,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6937002222DA318900C2233C /* SwiftyDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109622DA2DC600182936 /* SwiftyDeckTests.swift */; };
 		6937002322DA318B00C2233C /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109822DA2DDE00182936 /* CardTests.swift */; };
 		6937002422DA319000C2233C /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109A22DA2DE700182936 /* DeckTests.swift */; };
@@ -42,7 +41,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftyDeck_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyDeck_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		692C109622DA2DC600182936 /* SwiftyDeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyDeckTests.swift; sourceTree = "<group>"; };
 		692C109822DA2DDE00182936 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		692C109A22DA2DE700182936 /* DeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* Supporting Files */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				692C109622DA2DC600182936 /* SwiftyDeckTests.swift */,
 				692C109822DA2DDE00182936 /* CardTests.swift */,
 				692C109A22DA2DE700182936 /* DeckTests.swift */,
@@ -374,7 +371,6 @@
 				6937002422DA319000C2233C /* DeckTests.swift in Sources */,
 				6937002322DA318B00C2233C /* CardTests.swift in Sources */,
 				6937002222DA318900C2233C /* SwiftyDeckTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
