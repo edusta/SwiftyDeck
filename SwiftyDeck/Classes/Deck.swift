@@ -11,8 +11,8 @@ import Foundation
 public enum DeckError: Error, Equatable {
     case invalidDrawCount(drawCount: Int)
     case notEnoughCards(deckCount: Int, drawCount: Int)
-    case internalDrawError(isRandom: Bool, drawCount: Int)
 }
+
 public struct Deck {
     public private(set) var cards: [Card]
     
@@ -52,14 +52,12 @@ public struct Deck {
             return .failure(DeckError.notEnoughCards(deckCount: self.count, drawCount: drawCount))
         }
         
-        let drawnCards = (0..<drawCount).compactMap({ (_) -> Card? in
-            return randomly ? self.cards.popRandom() : self.cards.popLast()
+        let drawnCards = (0..<drawCount).map({ (_) -> Card in
+            // We can safely unwrap the results;
+            // Since we are sure that the Array has enough Cards.
+            return (randomly ? self.cards.popRandom() : self.cards.popLast())!
         })
-        
-        guard drawnCards.count == drawCount else {
-            return .failure(DeckError.internalDrawError(isRandom: randomly, drawCount: drawCount))
-        }
-        
+
         return .success(drawnCards)
     }
 }

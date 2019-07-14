@@ -109,7 +109,6 @@
 		B31AB226691794D80D6B4164F615F941 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F2E9A052B62A045CC6E66F823F9B0 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B7097E9992DFF704E16BAFC3FBDCC287 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB6533AA30AAF1047036DCA955078B /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BD379F95293A811D8E591CAC8E9FF410 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB5078A1874105FFE291659863380A4 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFC39316CFACE60FCBD7749C9406B3EB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69651C8D93020FEF793CCEE0018F02 /* ReplaceMe.swift */; };
 		C051C0411627BD5FCDA031782EB1F716 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0D7C95F270399EA5DD0AFDFA6EB957 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C147B29A97ACEC6639FC0D3CDAA6BA64 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809BD180C16D4CD22D686A31EA7D394 /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C16CDA92867234C2253A914F7D2488B1 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B4BA388ECEEA79BB54A7942B9BBB8 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -273,7 +272,6 @@
 		91C2938BB9F4C9E902795C9D84DA241D /* Card.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Card.swift; path = SwiftyDeck/Classes/Card.swift; sourceTree = "<group>"; };
 		92486562F8CC617C8E5FA240F85C45F4 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
 		9325D7B96C7BDEB7AE820CB7AFFC735C /* SwiftyDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A69651C8D93020FEF793CCEE0018F02 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SwiftyDeck/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		9BAF0E3FB2716BE3CCF29D04144A99B4 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E90F421C9AE70A369AC03AC636FAF4B /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
@@ -624,7 +622,6 @@
 				91C2938BB9F4C9E902795C9D84DA241D /* Card.swift */,
 				3A63AC5C1670BE6665DA2FB0646F59A2 /* Deck.swift */,
 				2BD70B9663B2BEAE26AA66084F9A68B1 /* DeckSet.swift */,
-				9A69651C8D93020FEF793CCEE0018F02 /* ReplaceMe.swift */,
 				6434B533380FC0A4C03F32BBBD3A8FF3 /* Pod */,
 				80631402443B3507411A15127B45B400 /* Support Files */,
 			);
@@ -1036,7 +1033,6 @@
 				691400C780D919CEABEEB027251AF453 /* Card.swift in Sources */,
 				A1674A00E9963927DE2F1FDC8F993A96 /* Deck.swift in Sources */,
 				618514004BA41A72EEB53D0F78B14614 /* DeckSet.swift in Sources */,
-				BFC39316CFACE60FCBD7749C9406B3EB /* ReplaceMe.swift in Sources */,
 				D0EBB7AB034AEA15938373E6B682B69E /* SwiftyDeck-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

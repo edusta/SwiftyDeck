@@ -12,6 +12,11 @@ import SwiftyDeck
 
 class DeckTests: QuickSpec {
     override func spec() {
+        var deck: Deck!
+        beforeEach {
+            deck = Deck.standard()
+        }
+        
         describe("standard decks") {
             it("should pass the single deck test") {
                 let shuffledDeck = Deck.standard()
@@ -22,10 +27,8 @@ class DeckTests: QuickSpec {
                 }
             }
         }
-        
         describe("deck deal") {
             it("should pass all of dem") {
-                var deck = Deck.standard()
                 var emptyShoe: [Card] = []
                 (0..<SwiftyDeckTests.trueDeckCount).forEach { (_) in
                     let draw = deck.deal()
@@ -45,6 +48,45 @@ class DeckTests: QuickSpec {
                 let expectedError = DeckError.notEnoughCards(deckCount: 0, drawCount: 1)
                 let result = deck.deal()
                 self.testSingleError(on: result, expectedError: expectedError)
+            }
+        }
+        
+        describe("deck draws") {
+            context("randomly") {
+                it("should fetch all the deck") {
+                    let result = deck.draw(randomly: true, drawCount: SwiftyDeckTests.trueDeckCount)
+                    expect {
+                        let cards = try result.get()
+                        expect(Set(Deck.standard().cards)) == Set(cards)
+                        return nil
+                    }.notTo(throwError(errorType: DeckError.self))
+                }
+                it("should not be able to fetch more than the deck has") {
+                    let result = deck.draw(randomly: true, drawCount: SwiftyDeckTests.trueDeckCount + 1)
+                    expect { try result.get() }.to(throwError(errorType: DeckError.self))
+                }
+                it("should not be able to fetch < 1 cards") {
+                    let result = deck.draw(randomly: true, drawCount: -1)
+                    expect { try result.get() }.to(throwError(errorType: DeckError.self))
+                }
+            }
+            context("standard") {
+                it("should fetch all the deck") {
+                    let result = deck.draw(drawCount: SwiftyDeckTests.trueDeckCount)
+                    expect {
+                        let cards = try result.get()
+                        expect(Set(Deck.standard().cards)) == Set(cards)
+                        return nil
+                    }.notTo(throwError(errorType: DeckError.self))
+                }
+                it("should not be able to fetch more than the deck has") {
+                    let result = deck.draw(drawCount: SwiftyDeckTests.trueDeckCount + 1)
+                    expect { try result.get() }.to(throwError(errorType: DeckError.self))
+                }
+                it("should not be able to fetch < 1 cards") {
+                    let result = deck.draw(drawCount: -1)
+                    expect { try result.get() }.to(throwError(errorType: DeckError.self))
+                }
             }
         }
     }
