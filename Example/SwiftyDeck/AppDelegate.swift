@@ -13,9 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        setupApplicationStyle()
         return true
     }
 
@@ -44,3 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// Mini Style-Manager
+extension AppDelegate {
+    private func setupApplicationStyle() {
+        let font = UIFont(name: "Avenir-Book", size: 16)!
+
+//        Not really sure why this doesn't work:
+//        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIToolbar.self]).setTitleTextAttributes([.font: font], for: [.normal, .highlighted])
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIToolbar.self]).setTitleTextAttributes([.font: font], for: .normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIToolbar.self]).setTitleTextAttributes([.font: font], for: .highlighted)
+    }
+}

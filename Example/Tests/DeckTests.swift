@@ -48,6 +48,7 @@ class DeckTests: QuickSpec {
                 
                 // Error: Drawing on empty deck
                 let expectedError = DeckError.notEnoughCards(deckCount: 0, drawCount: 1)
+                print(expectedError.localizedDescription)
                 let result = deck.deal()
                 self.testSingleError(on: result, expectedError: expectedError)
             }

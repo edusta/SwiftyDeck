@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F35A24EFB9923939DE563DF /* Pods_SwiftyDeck_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDBB0C71922B9A4F905D7C4 /* Pods_SwiftyDeck_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -17,6 +16,8 @@
 		6937002322DA318B00C2233C /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109822DA2DDE00182936 /* CardTests.swift */; };
 		6937002422DA319000C2233C /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C109A22DA2DE700182936 /* DeckTests.swift */; };
 		69695C4522DB4FC3000E71D9 /* DeckSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69695C4422DB4FC3000E71D9 /* DeckSetTests.swift */; };
+		69F0A59E22DB5925006B1C80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0A59D22DB5925006B1C80 /* MainViewController.swift */; };
+		69F0A5A322DB5AED006B1C80 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0A5A222DB5AED006B1C80 /* MainInteractor.swift */; };
 		8C08BD6F825AD7F1CC0128FC /* Pods_SwiftyDeck_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9A663D2774258FAB640AA0 /* Pods_SwiftyDeck_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		607FACD01AFB9204008FA782 /* SwiftyDeck_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyDeck_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		692C109822DA2DDE00182936 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		692C109A22DA2DE700182936 /* DeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
 		69695C4422DB4FC3000E71D9 /* DeckSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSetTests.swift; sourceTree = "<group>"; };
+		69F0A59D22DB5925006B1C80 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		69F0A5A222DB5AED006B1C80 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		783B5AA65CA7CA0C0010C8D9 /* Pods-SwiftyDeck_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Example.release.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Example/Pods-SwiftyDeck_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7B9A663D2774258FAB640AA0 /* Pods_SwiftyDeck_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyDeck_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C1E3A2B91A22AAF71B586A /* Pods-SwiftyDeck_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyDeck_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyDeck_Tests/Pods-SwiftyDeck_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				69F0A5A122DB5AC9006B1C80 /* Main View */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -146,6 +148,15 @@
 				F5FCAA67F7C9CB5A4F27A81D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		69F0A5A122DB5AC9006B1C80 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				69F0A5A222DB5AED006B1C80 /* MainInteractor.swift */,
+				69F0A59D22DB5925006B1C80 /* MainViewController.swift */,
+			);
+			name = "Main View";
 			sourceTree = "<group>";
 		};
 		A1D204A51F13890AFB3222E4 /* Frameworks */ = {
@@ -380,7 +391,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				69F0A59E22DB5925006B1C80 /* MainViewController.swift in Sources */,
+				69F0A5A322DB5AED006B1C80 /* MainInteractor.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

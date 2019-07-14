@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftyDeck_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="SwiftyDeck_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,8 +20,58 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="85T-si-qpK">
+                                <rect key="frame" x="163" y="281" width="49" height="105.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-pd-vmC">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-WC-GPV">
+                                        <rect key="frame" x="0.0" y="69.5" width="49" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="Deal!"/>
+                                        <connections>
+                                            <action selector="dealAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nsr-Hf-sIg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K91-Iv-eXC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Shuffled Deck" id="PSr-O1-3ku">
+                                        <connections>
+                                            <action selector="shuffledDeckAction:" destination="vXZ-lx-hvc" id="xLJ-1n-Xb0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1gj-3M-gBe"/>
+                                    <barButtonItem title="Sorted Deck" id="SdS-2e-8NI">
+                                        <connections>
+                                            <action selector="sortedDeckAction:" destination="vXZ-lx-hvc" id="XnM-KP-qqM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K91-Iv-eXC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="0e9-Lf-Knh"/>
+                            <constraint firstAttribute="trailing" secondItem="K91-Iv-eXC" secondAttribute="trailing" id="L9n-Lg-EkN"/>
+                            <constraint firstItem="85T-si-qpK" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="P6h-0X-eyq"/>
+                            <constraint firstItem="85T-si-qpK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="X9S-OP-QLV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="85T-si-qpK" secondAttribute="bottom" constant="16" id="bBv-eg-yvl"/>
+                            <constraint firstItem="K91-Iv-eXC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sko-R5-2tr"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="85T-si-qpK" secondAttribute="trailing" constant="16" id="uUi-Be-6e3"/>
+                            <constraint firstItem="85T-si-qpK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wcs-XB-ts9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="informationLabel" destination="62G-pd-vmC" id="cCp-FY-XRz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

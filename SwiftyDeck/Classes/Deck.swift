@@ -8,9 +8,18 @@
 
 import Foundation
 
-public enum DeckError: Error, Equatable {
+public enum DeckError: Error, Equatable, LocalizedError {
     case invalidDrawCount(drawCount: Int)
     case notEnoughCards(deckCount: Int, drawCount: Int)
+    
+    public var errorDescription: String? {
+        switch self {
+        case .invalidDrawCount(let drawCount):
+            return "Invalid draw count: \(drawCount)."
+        case .notEnoughCards(let deckCount, let drawCount):
+            return "Tried to draw \(drawCount) card(s), but \(deckCount) card(s) left in the deck."
+        }
+    }
 }
 
 public struct Deck: Drawable {
