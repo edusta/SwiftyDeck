@@ -7,7 +7,7 @@ before_install:
   - pod repo update
   - pod install --project-directory=Example
 
-xcode_project: Example/SwiftyDeck.xcodeproj # path to your xcodeproj folder
+xcode_project: Example/SwiftyDeck.xcworkspace # path to your xcodeproj folder
 xcode_scheme: SwiftyDeck-Example
 xcode_destination: platform=iOS Simulator,name=iPhone X,OS=12.1
 
