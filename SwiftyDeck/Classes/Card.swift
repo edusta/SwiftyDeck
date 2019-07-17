@@ -38,4 +38,8 @@ public struct Card: Hashable, Equatable, CustomStringConvertible {
     public var description: String {
         return "\(rank) of \(suit)"
     }
+    
+    public var imageName: String {
+        return "\(suit.rawValue)_\(rank)"
+    }
 }

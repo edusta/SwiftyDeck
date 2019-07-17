@@ -32,9 +32,9 @@ SwiftyDeck is created in order to reuse mostly-generic Card/Deck concept for any
   s.ios.deployment_target = '10.0'
   s.source_files = 'SwiftyDeck/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SwiftyDeck' => ['SwiftyDeck/Assets/*.png']
-  # }
+  s.resource_bundles = {
+      'SwiftyDeck' => ['SwiftyDeck/Assets/*.xcassets']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -9,6 +9,10 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyDeck.svg?style=flat)](https://cocoapods.org/pods/SwiftyDeck)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyDeck.svg?style=flat)](https://cocoapods.org/pods/SwiftyDeck)
 
+Special thanks to https://www.sketchappsources.com/contributor/grafik_fighter, the provider of the deck images:
+
+https://www.sketchappsources.com/free-source/3060-cards-deck-template-sketch-freebie-resource.html
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

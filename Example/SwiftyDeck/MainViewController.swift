@@ -10,14 +10,26 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet private weak var informationLabel: UILabel!
-
+    @IBOutlet private weak var cardImageView: UIImageView!
+    @IBOutlet private weak var cardContainerView: UIView!
+    
     private let interactor = MainInteractor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.setupInteractor()
+        self.setupCardContainerView()
+    }
+    
+    private func setupInteractor() {
         self.interactor.delegate = self
+    }
+    
+    private func setupCardContainerView() {
+        self.cardContainerView.layer.borderColor = UIColor.black.cgColor
+        self.cardContainerView.layer.borderWidth = 1
     }
     
     @IBAction private func shuffledDeckAction(_ sender: UIBarButtonItem) {
@@ -37,15 +49,22 @@ extension MainViewController: MainInteractorDelegate {
             switch state {
             case .informational(let info):
                 self.setLabelText(info)
-            case .dealtHand(let cardInfo):
+                self.setCardImage(nil)
+            case .dealtHand(let cardInfo, let image):
                 self.setLabelText(cardInfo)
+                self.setCardImage(image)
             case .errored(let errorInfo):
                 self.setLabelText(errorInfo)
+                self.setCardImage(nil)
             }
         }
     }
     
     private func setLabelText(_ text: String) {
         self.informationLabel.text = text
+    }
+    
+    private func setCardImage(_ image: UIImage?) {
+        self.cardImageView.image = image
     }
 }

@@ -21,17 +21,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="85T-si-qpK">
-                                <rect key="frame" x="163" y="281" width="49" height="105.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="85T-si-qpK">
+                                <rect key="frame" x="59.5" y="81.5" width="256" height="504"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-pd-vmC">
-                                        <rect key="frame" x="0.0" y="0.0" width="49" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftyDeck" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-pd-vmC">
+                                        <rect key="frame" x="79" y="0.0" width="98" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KA-Ne-dkM">
+                                        <rect key="frame" x="0.0" y="69.5" width="256" height="356.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hJY-QU-u54">
+                                                <rect key="frame" x="4" y="4" width="248" height="348.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hJY-QU-u54" secondAttribute="height" multiplier="121:170" id="zvd-Os-1Sm"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="hJY-QU-u54" firstAttribute="centerX" secondItem="1KA-Ne-dkM" secondAttribute="centerX" id="0SE-PQ-mE7"/>
+                                            <constraint firstItem="hJY-QU-u54" firstAttribute="top" secondItem="1KA-Ne-dkM" secondAttribute="top" constant="4" id="8g1-0E-pKv"/>
+                                            <constraint firstAttribute="bottom" secondItem="hJY-QU-u54" secondAttribute="bottom" constant="4" id="9s0-Qr-HUx"/>
+                                            <constraint firstItem="hJY-QU-u54" firstAttribute="centerY" secondItem="1KA-Ne-dkM" secondAttribute="centerY" id="QhJ-Fl-KV7"/>
+                                            <constraint firstItem="hJY-QU-u54" firstAttribute="leading" secondItem="1KA-Ne-dkM" secondAttribute="leading" constant="4" id="a4u-nR-SBF"/>
+                                            <constraint firstAttribute="trailing" secondItem="hJY-QU-u54" secondAttribute="trailing" constant="4" id="sq3-hF-eY0"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-WC-GPV">
-                                        <rect key="frame" x="0.0" y="69.5" width="49" height="36"/>
+                                        <rect key="frame" x="108" y="468" width="40" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Deal!"/>
                                         <connections>
@@ -62,14 +82,16 @@
                             <constraint firstItem="K91-Iv-eXC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="0e9-Lf-Knh"/>
                             <constraint firstAttribute="trailing" secondItem="K91-Iv-eXC" secondAttribute="trailing" id="L9n-Lg-EkN"/>
                             <constraint firstItem="85T-si-qpK" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="P6h-0X-eyq"/>
-                            <constraint firstItem="85T-si-qpK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="X9S-OP-QLV"/>
+                            <constraint firstItem="85T-si-qpK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="X9S-OP-QLV"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="85T-si-qpK" secondAttribute="bottom" constant="16" id="bBv-eg-yvl"/>
                             <constraint firstItem="K91-Iv-eXC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sko-R5-2tr"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="85T-si-qpK" secondAttribute="trailing" constant="16" id="uUi-Be-6e3"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="85T-si-qpK" secondAttribute="trailing" constant="32" id="uUi-Be-6e3"/>
                             <constraint firstItem="85T-si-qpK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wcs-XB-ts9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardContainerView" destination="1KA-Ne-dkM" id="Llw-uQ-fiM"/>
+                        <outlet property="cardImageView" destination="hJY-QU-u54" id="Hp4-Wr-f2i"/>
                         <outlet property="informationLabel" destination="62G-pd-vmC" id="cCp-FY-XRz"/>
                     </connections>
                 </viewController>

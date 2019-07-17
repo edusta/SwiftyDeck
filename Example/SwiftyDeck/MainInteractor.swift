@@ -11,7 +11,7 @@ import SwiftyDeck
 
 enum MainInteractorState {
     case informational(info: String)
-    case dealtHand(cardInfo: String)
+    case dealtHand(cardInfo: String, image: UIImage?)
     case errored(errorInfo: String)
 }
 
@@ -42,7 +42,7 @@ final class MainInteractor: NSObject {
         
         switch result {
         case .success(let card):
-            delegate?.render(state: .dealtHand(cardInfo: card.description))
+            delegate?.render(state: .dealtHand(cardInfo: card.description, image: CardUI.imageOf(card: card)))
         case .failure(let error):
             delegate?.render(state: .errored(errorInfo: error.localizedDescription))
         }
