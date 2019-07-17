@@ -256,7 +256,7 @@
 		69345708261C337A7905DB545FC8E906 /* URL+FileName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+FileName.swift"; path = "Sources/Quick/URL+FileName.swift"; sourceTree = "<group>"; };
 		69695C4222DB49FC000E71D9 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Drawable.swift; path = SwiftyDeck/Classes/Drawable.swift; sourceTree = "<group>"; };
 		6986991F22DFAF8500205D35 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		6986997122DFB46B00205D35 /* CardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUI.swift; sourceTree = "<group>"; };
+		6986997122DFB46B00205D35 /* CardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardUI.swift; path = SwiftyDeck/Classes/CardUI.swift; sourceTree = "<group>"; };
 		6986997722DFB83400205D35 /* Clubs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Clubs.xcassets; sourceTree = "<group>"; };
 		6986997922DFB84700205D35 /* Spades.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Spades.xcassets; sourceTree = "<group>"; };
 		6986997B22DFB85000205D35 /* Diamonds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Diamonds.xcassets; sourceTree = "<group>"; };
