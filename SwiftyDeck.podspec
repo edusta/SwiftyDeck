@@ -38,7 +38,4 @@ SwiftyDeck is created in order to reuse mostly-generic Card/Deck concept for any
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Quick'
-  s.dependency 'Nimble'
-  s.dependency 'SwiftLint'
 end
