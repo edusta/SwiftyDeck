@@ -11,7 +11,13 @@ import Nimble
 import SwiftyDeck
 
 class DeckSetTests: QuickSpec {
-    override func spec() {
-        
+    override func spec() {        
+        describe("deckSet initialization") {
+            (1...100).forEach { index in
+                let newDeck = DeckSet(deckCount: index, shuffled: true)
+                
+                expect(newDeck.count) == SwiftyDeckTests.trueDeckCount * index
+            }
+        }
     }
 }

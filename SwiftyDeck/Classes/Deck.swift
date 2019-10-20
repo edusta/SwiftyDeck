@@ -48,6 +48,7 @@ public struct Deck: Drawable {
             return .failure(error)
         }
     }
+    
     public mutating func draw(randomly: Bool, drawCount: Int) -> Result<[Card], Error> {
         guard drawCount > 0 else {
             return .failure(DeckError.invalidDrawCount(drawCount: drawCount))
@@ -56,10 +57,8 @@ public struct Deck: Drawable {
             return .failure(DeckError.notEnoughCards(deckCount: self.count, drawCount: drawCount))
         }
         
-        let drawnCards = (0..<drawCount).map({ (_) -> Card in
-            // We can safely unwrap the results;
-            // Since we are sure that the Array has enough Cards.
-            return (randomly ? self.cards.popRandom() : self.cards.popLast())!
+        let drawnCards = (0..<drawCount).compactMap({ (_) -> Card? in
+            return randomly ? self.cards.popRandom() : self.cards.popLast()
         })
         
         guard drawnCards.count == drawCount else {
@@ -67,14 +66,5 @@ public struct Deck: Drawable {
         }
 
         return .success(drawnCards)
-    }
-}
-
-extension Array where Element == Card {
-    mutating func popRandom() -> Element? {
-        guard let element = randomElement() else { return nil }
-        guard let elementIndex = firstIndex(where: { $0 == element }) else { return nil }
-        
-        return remove(at: elementIndex)
     }
 }

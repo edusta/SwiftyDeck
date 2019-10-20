@@ -97,6 +97,8 @@ class DeckTests: QuickSpec {
 
 extension DeckTests {
     private func testSingleDeck(_ deck: Deck) {
+        // Count test: Every deck has to have <trueDeckCount> cards.
+
         expect(deck.count) == SwiftyDeckTests.trueDeckCount
 
         // Rank test: Every deck has to have <trueSuitCount> cards of the same rank.
@@ -117,6 +119,7 @@ extension DeckTests {
         let cardSet = Set(deck.cards)
         expect(cardSet).to(haveCount(SwiftyDeckTests.trueDeckCount))    
     }
+    
     private func testSingleError<T: Any>(on result: Result<T, Error>, expectedError: DeckError) {
         switch result {
         case .success:

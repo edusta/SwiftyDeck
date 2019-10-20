@@ -10,7 +10,7 @@ import Foundation
 
 public struct DeckSet: Drawable {
     public private(set) var deckCount: Int
-    public private(set) var combinedDeck: Deck
+    private var combinedDeck: Deck
     
     public var count: Int {
         return combinedDeck.count
@@ -26,12 +26,14 @@ public struct DeckSet: Drawable {
     public init(deckCount: Int, shuffled: Bool) {
         self.deckCount = deckCount
         
-        let decks = (0..<deckCount).map { (_) -> Deck in
+        let decks = (0..<deckCount).map { _ -> Deck in
             return Deck.standard(shuffled: shuffled)
         }
-        self.combinedDeck = Deck(cards: decks.flatMap({ (deck) -> [Card] in
+        let cards = decks.flatMap { deck -> [Card] in
             return deck.cards
-        }))
+        }
+        
+        self.combinedDeck = Deck(cards: shuffled ? cards.shuffled() : cards)
     }
 
     public mutating func deal() -> Result<Card, Error> {

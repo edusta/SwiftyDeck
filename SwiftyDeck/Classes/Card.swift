@@ -20,6 +20,7 @@ public enum Suit: String, CaseIterable, CustomStringConvertible {
         }
     }
 }
+
 public enum Rank: Int, CaseIterable {
     case ace = 1
     case two, three, four, five, six, seven, eight, nine, ten

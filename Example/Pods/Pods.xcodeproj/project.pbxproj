@@ -78,6 +78,7 @@
 		6986997A22DFB84700205D35 /* Spades.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6986997922DFB84700205D35 /* Spades.xcassets */; };
 		6986997C22DFB85000205D35 /* Diamonds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6986997B22DFB85000205D35 /* Diamonds.xcassets */; };
 		6986997E22DFB85900205D35 /* Hearts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6986997D22DFB85900205D35 /* Hearts.xcassets */; };
+		69D9022A235CB53E00B1275E /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D90229235CB53E00B1275E /* Array+Extension.swift */; };
 		6FEF88EEE27E478A074BB72C6F9E1D17 /* Pods-SwiftyDeck_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6E82C54C941956C69DB7BCBF9D99D2 /* Pods-SwiftyDeck_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71EC482B285F78B50C0C093F41E8DC87 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29872DAC10029C3A033556C41DBC91E9 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		71F9C34DC1AFED7BD3C27F6D3C99D1AB /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F9EB1717929BC6DB5D4FB454D80DD /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -261,6 +262,7 @@
 		6986997922DFB84700205D35 /* Spades.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Spades.xcassets; sourceTree = "<group>"; };
 		6986997B22DFB85000205D35 /* Diamonds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Diamonds.xcassets; sourceTree = "<group>"; };
 		6986997D22DFB85900205D35 /* Hearts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Hearts.xcassets; sourceTree = "<group>"; };
+		69D90229235CB53E00B1275E /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "SwiftyDeck/Classes/Array+Extension.swift"; sourceTree = "<group>"; };
 		6AB06A056843219119C78B6CE30064E2 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
 		6B82A9F69876C0F3D17D8D5004FFB0FE /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
 		6CA075DD838566070038C08A07D19EE5 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				6986990222DFAF8500205D35 /* Assets */,
+				69D90229235CB53E00B1275E /* Array+Extension.swift */,
 				69695C4222DB49FC000E71D9 /* Drawable.swift */,
 				91C2938BB9F4C9E902795C9D84DA241D /* Card.swift */,
 				6986997122DFB46B00205D35 /* CardUI.swift */,
@@ -1069,6 +1072,7 @@
 				A1674A00E9963927DE2F1FDC8F993A96 /* Deck.swift in Sources */,
 				618514004BA41A72EEB53D0F78B14614 /* DeckSet.swift in Sources */,
 				6986997222DFB46B00205D35 /* CardUI.swift in Sources */,
+				69D9022A235CB53E00B1275E /* Array+Extension.swift in Sources */,
 				D0EBB7AB034AEA15938373E6B682B69E /* SwiftyDeck-dummy.m in Sources */,
 				69695C4322DB49FC000E71D9 /* Drawable.swift in Sources */,
 			);
