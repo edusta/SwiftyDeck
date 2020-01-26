@@ -10,6 +10,5 @@ target 'SwiftyDeck_Example' do
 
     pod 'Quick'
     pod 'Nimble'
-    pod 'SwiftLint'
   end
 end

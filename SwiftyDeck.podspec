@@ -24,7 +24,7 @@ SwiftyDeck is created in order to reuse mostly-generic Card/Deck concept for any
   s.homepage         = 'https://github.com/edusta/SwiftyDeck'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Engin Deniz Usta' => 'engin@connected2.me' }
+  s.author           = { 'Engin Deniz Usta' => 'engin@ceng.metu.edu.tr' }
   s.source           = { :git => 'https://github.com/edusta/SwiftyDeck.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/edustaa'
 
@@ -32,9 +32,7 @@ SwiftyDeck is created in order to reuse mostly-generic Card/Deck concept for any
   s.ios.deployment_target = '10.0'
   s.source_files = 'SwiftyDeck/Classes/**/*'
   
-  s.resource_bundles = {
-      'SwiftyDeck' => ['SwiftyDeck/Assets/*.xcassets']
-  }
+  s.resources = 'SwiftyDeck/Assets/**'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

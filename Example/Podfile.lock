@@ -1,20 +1,17 @@
 PODS:
   - Nimble (8.0.2)
   - Quick (2.1.0)
-  - SwiftLint (0.33.1)
-  - SwiftyDeck (0.1.0)
+  - SwiftyDeck (0.1.4)
 
 DEPENDENCIES:
   - Nimble
   - Quick
-  - SwiftLint
   - SwiftyDeck (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
-    - SwiftLint
 
 EXTERNAL SOURCES:
   SwiftyDeck:
@@ -23,9 +20,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  SwiftLint: 9fc1143bbacec37f94994a7d0d2a85b2154b6294
-  SwiftyDeck: 3920d2d4c7e7cc0df2cfa88a41707d7c22bd4489
+  SwiftyDeck: 566767503becb82cf33724127c2acd2afc748636
 
-PODFILE CHECKSUM: 3b8cf879e594d7c5c982acfbb34b742fb77cf3d8
+PODFILE CHECKSUM: 4f87960b60bb88c6984104b19d1131079a742788
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4
